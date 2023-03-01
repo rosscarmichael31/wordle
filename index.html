@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <title>Wordle</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Stats modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>STATISTICS</h2>
+        <div id="stats-container">
+          <div class="stats-child" id="stats-played"></div>
+          <div class="stats-child" id="stats-percent">100%</div>
+          <div class="stats-child">Played</div>
+          <div class="stats-child">Won</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div>
+        <header class="header-container">
+          <div class="spacer"></div>
+          <h1 id="heading">Wordle</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="4 4 24 24"
+            height="40"
+            width="40"
+            data-testid="icon-statistics"
+            id="icon-stats"
+            alt="statistics button"
+          >
+            <path
+              fill="#FFFFFF"
+              d="M20.6666 14.8333V5.5H11.3333V12.5H4.33325V26.5H27.6666V14.8333H20.6666ZM13.6666 7.83333H18.3333V24.1667H13.6666V7.83333ZM6.66659 14.8333H11.3333V24.1667H6.66659V14.8333ZM25.3333 24.1667H20.6666V17.1667H25.3333V24.1667Z"
+            ></path>
+          </svg>
+        </header>
+        <div class="message-container"></div>
+
+        <div id="guess-container">
+          <div class="guess">
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+          </div>
+          <div class="guess">
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+          </div>
+          <div class="guess">
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+          </div>
+          <div class="guess">
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+          </div>
+          <div class="guess">
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+          </div>
+          <div class="guess">
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+            <div class="guess-letter"></div>
+          </div>
+        </div>
+
+        <div id="keyboard-container">
+          <div class="keyboard-row">
+            <button class="keyboard-letter">q</button>
+            <button class="keyboard-letter">w</button>
+            <button class="keyboard-letter">e</button>
+            <button class="keyboard-letter">r</button>
+            <button class="keyboard-letter">t</button>
+            <button class="keyboard-letter">y</button>
+            <button class="keyboard-letter">u</button>
+            <button class="keyboard-letter">i</button>
+            <button class="keyboard-letter">o</button>
+            <button class="keyboard-letter">p</button>
+          </div>
+
+          <div class="keyboard-row">
+            <div class="spacer-half"></div>
+            <button class="keyboard-letter">a</button>
+            <button class="keyboard-letter">s</button>
+            <button class="keyboard-letter">d</button>
+            <button class="keyboard-letter">f</button>
+            <button class="keyboard-letter">g</button>
+            <button class="keyboard-letter">h</button>
+            <button class="keyboard-letter">j</button>
+            <button class="keyboard-letter">k</button>
+            <button class="keyboard-letter">l</button>
+            <div class="spacer-half"></div>
+          </div>
+
+          <div class="keyboard-row">
+            <button class="keyboard-letter wide-button">Enter</button>
+            <button class="keyboard-letter">z</button>
+            <button class="keyboard-letter">x</button>
+            <button class="keyboard-letter">c</button>
+            <button class="keyboard-letter">v</button>
+            <button class="keyboard-letter">b</button>
+            <button class="keyboard-letter">n</button>
+            <button class="keyboard-letter">m</button>
+            <button class="keyboard-letter wide-button">Del</button>
+          </div>
+        </div>
+      </div>
+      <div id="restart-container">
+        <h1>PLAY AGAIN?</h1>
+        <input id="restart" type="image" src="reset.png" alt="restart game" />
+      </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
